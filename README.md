@@ -1,16 +1,8 @@
-# daily_tasks
+## daily_tasks
+This is a simple task app.We can create new task with task title,description,startdate and enddate.We also can edit and delecte task.Task can be make as completed.All task list and complete task list is seperated.
 
-A new Flutter project.
+## dependencies used:-
+  cupertino_icons: ^1.0.2  
+  sqflite: ^2.0.0  
+  path: ^1.8.3  
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
