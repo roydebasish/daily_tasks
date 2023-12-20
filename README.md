@@ -28,7 +28,7 @@ flutter pub get
 Now you can run the app on an emulator or connected device:
 flutter run
 
-
+```
 
 ## dependencies used:-
   cupertino_icons: ^1.0.2  
