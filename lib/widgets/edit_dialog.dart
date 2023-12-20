@@ -65,52 +65,104 @@ class _EditTaskDialogState extends State<EditTaskDialog> {
               ),
             ),
             const SizedBox(height: 16.0),
-            const Text('Start Time:'),
-            InkWell(
-              onTap: () async {
-                DateTime? pickedDate = await showDatePicker(
-                  context: context,
-                  initialDate: _startTime ?? DateTime.now(),
-                  firstDate: DateTime(2000),
-                  lastDate: DateTime(2101),
-                );
-                if (pickedDate != null) {
-                  setState(() {
-                    _startTime = pickedDate;
-                  });
-                }
-              },
-              child: Container(
-                padding: EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                  border: Border.all(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Start Date :'),
+                      InkWell(
+                        onTap: () async {
+                          DateTime? pickedDate = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2101),
+                          );
+                          if (pickedDate != null) {
+                            setState(() {
+                              _startTime = pickedDate;
+                            });
+                          }
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          margin: const EdgeInsets.symmetric(vertical: 5),
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1.0,
+                                color: Colors.grey,
+                              ),
+                              borderRadius: BorderRadius.circular(8.0)),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Text(_startTime?.toLocal().toString().split(' ')[0] ?? 'Select Start Date'),
+
+                              ),
+                              const Icon(
+                                Icons.calendar_month,
+                                color: Colors.grey,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                child: Text(_startTime?.toLocal().toString().split(' ')[0] ?? 'Select Start Time'),
-              ),
-            ),
-            const SizedBox(height: 16.0),
-            const Text('End Time:'),
-            InkWell(
-              onTap: () async {
-                DateTime? pickedDate = await showDatePicker(
-                  context: context,
-                  initialDate: _endTime ?? DateTime.now(),
-                  firstDate: DateTime(2000),
-                  lastDate: DateTime(2101),
-                );
-                if (pickedDate != null) {
-                  setState(() {
-                    _endTime = pickedDate;
-                  });
-                }
-              },
-              child: Container(
-                padding: EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                  border: Border.all(),
+                const SizedBox(width: 10.0),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('End Date :'),
+                      InkWell(
+                        onTap: () async {
+                          DateTime? pickedDate = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2101),
+                          );
+                          if (pickedDate != null) {
+                            setState(() {
+                              _endTime = pickedDate;
+                            });
+                          }
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          margin: const EdgeInsets.symmetric(vertical: 5),
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1.0,
+                                color: Colors.grey,
+                              ),
+                              borderRadius: BorderRadius.circular(8.0)),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Text(_endTime?.toLocal().toString().split(' ')[0] ?? 'Select End Date'),
+                              ),
+                              const Icon(
+                                Icons.calendar_month,
+                                color: Colors.grey,
+                              )
+                            ],
+                          ),
+                        ),
+
+
+                      ),
+                    ],
+                  ),
                 ),
-                child: Text(_endTime?.toLocal().toString().split(' ')[0] ?? 'Select End Time'),
-              ),
+              ],
             ),
             const SizedBox(height: 16.0),
             CheckboxListTile(
