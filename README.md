@@ -1,16 +1,37 @@
-# daily_tasks
-
-A new Flutter project.
+## daily_tasks
+This is a simple task app.We can create new task with task title,description,startdate and enddate.We also can edit and delecte task.Task can be make as completed.All task list and complete task list is seperated.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with this project, you'll need to clone the repository to your local machine. Follow these instructions:
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Make sure you have Flutter and Dart installed on your machine. If not, you can [install Flutter](https://flutter.dev/docs/get-started/install) by following the official Flutter installation guide.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Clone the Repository
+
+Open a terminal and run the following command to clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+
+#Navigate to the Project
+Change into the project directory:
+cd your-repo
+
+#Install Dependencies
+Run the following command to get the required depende
+flutter pub get
+
+#Run the App
+Now you can run the app on an emulator or connected device:
+flutter run
+
+```
+
+## dependencies used:-
+  cupertino_icons: ^1.0.2  
+  sqflite: ^2.0.0  
+  path: ^1.8.3  
+
